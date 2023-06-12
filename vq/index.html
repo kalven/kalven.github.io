@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VideoQueen</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="manifest" href="pwa_manifest.json">
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div id="pwa-flair" style="visibility:hidden">
+      <div id="app-icon"></div>
+      <div>VideoQueen</div>
+    </div>
+
+    <div id="megawrap">
+      <div id="video-container">
+        <div id="osd"></div>
+        <video loop id="video-player" controls="controls" controlsList="nodownload" poster="assets/black.png"></video>
+      </div>
+
+      <div id="toast-container">
+        <div id="toast" style="opacity:0">
+          <span id="toast-msg"></span><button id="toast-close"></button>
+        </div>
+      </div>
+
+      <div id="gallery-container">
+        <div id="toolbar">
+          <button id="open-folder"></button>
+          <input id="search-entry" type="text" spellcheck="false"></input>
+          <button id="clear-search"></button>
+          <button id="save-search"></button>
+          <button id="loop-button"></button>
+          <button id="shuffle-button"></button>
+          <button id="settings"></button>
+        </div>
+        <div id="completion"></div>
+
+        <div id="gallery-view">
+          <div class="scroll-gradient" id="top-gradient-mask"></div>
+          <div id="entries"></div>
+          <div class="scroll-gradient" id="bottom-gradient-mask"></div>
+        </div>
+
+        <div id="initial-view">
+          <button id="initial-open-folder"></button>
+          <div id="initial-text">
+            Select a folder to open. Video files supported by the browser will be
+            shown here.
+          </div>
+        </div>
+      </div>
+
+      <dialog id="settings-dialog">
+        <form method="dialog">
+          <div id="folder-grid-container">
+            <div id="folder-grid-header" class="folder-row">
+              <span class="folder-enable">Enable</span>
+              <span class="folder-name">Name</span>
+              <span class="folder-delete">Delete</span>
+            </div>
+            <div id="folder-grid">
+            </div>
+          </div>
+
+          <div id="settings-dialog-buttons">
+            <button class="dialog-button" id="settings-export-tags">Export tags</button>
+            <button class="dialog-button" id="settings-import-tags">Import tags</button>
+            <div style="flex-grow: 1;"></div>
+            <button class="dialog-button" id="settings-add-folder">Add folder</button>
+            <button class="dialog-button" id="settings-confirm" value="default">Close</button>
+          </div>
+        </form>
+      </dialog>
+
+      <dialog id="save-query-dialog">
+        <form method="dialog">
+          <div class="save-query-grid">
+            <span>Name</span><input id="save-query-name" class="default-edit" type="text"></input>
+            <span>Query</span><input id="save-query-query" class="default-edit" type="text"></input>
+          </div>
+          <div id="save-query-buttons">
+            <button class="dialog-button">Cancel</button>
+            <button class="dialog-button" id="save-query-confirm" value="default">Save</button>
+          </div>
+        </form>
+      </dialog>
+
+      <div id="sidebar">
+        <div id="saved-searches"></div>
+      </div>
+
+      <div id="progress-container" style="opacity:0">
+        <span>Generating previews</span><progress id="progress" value=0 max=1></progress>
+      </div>
+
+      <video id="generator" muted></video>
+      <canvas id="canvas"></canvas>
+    </div>
+  </body>
+</html>
