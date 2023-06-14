@@ -35,7 +35,7 @@ body {
     width: env(titlebar-area-height);
     height: env(titlebar-area-height);
     
-    background: url(./assets/icons/icon48.png) no-repeat;
+    background: url(assets/icons/icon48.png) no-repeat;
     background-size: 32px 32px;
 
     background-position-x: calc(calc(env(titlebar-area-height, 32) - 32px) / 2);

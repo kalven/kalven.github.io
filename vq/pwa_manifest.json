@@ -6,8 +6,8 @@
   "display": "fullscreen",
   "display_override": ["window-controls-overlay"],
   "id": "https://kalven.github.io/vq/index.html",
-  "start_url": "/vq/index.html",
-  "scope": "/vq/",
+  "start_url": "./",
+  "scope": "./",
 
   "icons": [{
       "src": "assets/icons/icon144.png",

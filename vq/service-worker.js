@@ -6,23 +6,19 @@ const addResourcesToCache = async (resources) => {
 };
 
 const enableNavigationPreload = async () => {
-  console.log('enableNavigationPreload');
   if (self.registration.navigationPreload) {
-    console.log('navigationPreload');
     // Enable navigation preloads!
     await self.registration.navigationPreload.enable();
   }
 };
 
 self.addEventListener('activate', (event) => {
-  console.log('activate event', event);
   event.waitUntil(enableNavigationPreload());
 });
 
 self.addEventListener('install', (event) => {
-  console.log('install event', event);
   event.waitUntil(addResourcesToCache([
-    '/vq/',
+    '/vq',
     '/vq/app.js',
   ]));
 });
@@ -38,7 +34,11 @@ self.addEventListener('fetch', (event) => {
         return networkResponse;
       });
 
-      return cachedResponse || fetchedResponse;
+      if (cachedResponse) {
+        return cachedResponse;
+      }
+
+      return fetchedResponse;
     });
   }));
 });
