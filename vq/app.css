@@ -249,6 +249,10 @@ dialog:modal {
     opacity: 0.5;
 }
 
+#toolbar > button:disabled {
+    opacity: 0.3;
+}
+
 #toolbar > button.disabled {
     opacity: 0.3;
 }
@@ -564,11 +568,38 @@ button.folder-delete {
     box-shadow: 2px 2px 2px rgb(0 0 0 / 30%);
 }
 
+.file-size-badge {
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+    right: 5px;
+    top: 6px;
+    opacity: 1;
+    transition: opacity 0.2s linear;
+
+    background: #29262b;
+    padding: 2px;
+    border-radius: 6px;
+    border-width: 0.5px;
+    border-style: solid;
+
+    font-size: 10px;
+
+    padding-left: 4px;
+    padding-right: 4px;
+
+    box-shadow: 2px 2px 2px rgb(0 0 0 / 30%);
+}
+
 .quality-badge:empty {
     display: none;
 }
 
 .duration-badge:empty {
+    display: none;
+}
+
+.file-size-badge:empty {
     display: none;
 }
 
