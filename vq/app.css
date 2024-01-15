@@ -386,42 +386,6 @@ dialog::backdrop {
     background: linear-gradient(0deg, black, transparent);
 }
 
-.folder-row {
-    display: flex;
-    gap: 1em;
-    margin-bottom: 0.5em;
-    align-items: center;
-}
-
-.folder-name {
-    flex: 1;
-}
-
-.folder-enable {
-    width: 50px;
-    cursor: pointer;
-}
-
-.folder-delete {
-    width: 50px;
-    text-align: right;
-}
-
-button.folder-delete {
-    width: 16px;
-    height: 16px;
-
-    background: url(./assets/delete-icon.svg) no-repeat;
-    background-size: 16px 16px;
-
-    border-style: none;
-    outline-style: none;
-}
-
-#folder-grid-header > span {
-    font-weight: bold;
-}
-
 #settings-dialog-buttons {
     display: flex;
     justify-content: flex-end;
