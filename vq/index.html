@@ -32,9 +32,22 @@
           <button id="clear-search" title="Clear search"></button>
           <button id="save-search" title="Save search" disabled></button>
           <button id="loop-button" title="Toggle loop"></button>
-          <button id="shuffle-button"></button>
+          <div id="sort-dropdown">
+            <button id="shuffle-button"></button>
+            <div id="sort-dropdown-content" class="sort-dropdown-content">
+              <input type="radio" id="arrange-shuffle" name="arrange-group">
+              <label for="arrange-shuffle">Shuffle</label><br>
+              <input type="radio" id="arrange-sort-az" name="arrange-group">
+              <label for="arrange-sort-az">Sort by title</label><br>
+              <input type="radio" id="arrange-sort-size" name="arrange-group">
+              <label for="arrange-sort-size">Sort by file size</label><br>
+              <input type="radio" id="arrange-sort-duration" name="arrange-group">
+              <label for="arrange-sort-duration">Sort by duration</label><br>
+            </div>
+          </div>
           <button id="settings" title="Settings"></button>
         </div>
+        <div id="sort-selection"></div>
         <div id="completion"></div>
 
         <div id="gallery-view">
@@ -54,6 +67,11 @@
 
       <dialog id="settings-dialog">
         <form method="dialog">
+          <input type="checkbox" id="settings-preview-video" name="settings-preview-video">
+          <label for="settings-preview-video">Preview video on hover</label><br>
+          <input type="checkbox" id="settings-hide-dupes" name="settings-hide-dupes">
+          <label for="settings-hide-dupes">Hide video duplicates</label><br>
+
           <div id="settings-dialog-buttons">
             <button class="dialog-button" id="settings-export-tags">Export tags</button>
             <button class="dialog-button" id="settings-import-tags">Import tags</button>
