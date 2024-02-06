@@ -142,18 +142,81 @@ dialog:modal {
     height: 100%;
 }
 
-#osd {
+#osd-container {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+
+    opacity: 0;
+    transition: opacity 0.2s linear;
+
     z-index: 50;
-    padding: 20px;
+
+    display: block;
+}
+
+#osd-title {
+    position: absolute;
+
+    left: 0px;
+    top: 0px;
 
     color: #fff;
     font-size: 24px;
     font-weight: bold;
     text-align: left;
     text-shadow: 0 0 3px black;
+}
+
+#osd-tags {
+    position: absolute;
+
+    right: 0px;
+    top: 0px;
+
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#osd-tags .tag {
+    border-radius: 1em;
+    border-width: 0.5px;
+    border-style: solid;
+
+    font-variant: small-caps;
+
+    padding-top: 0em;
+    padding-bottom: 0.2em;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+
+    box-shadow: 2px 2px 2px rgb(0 0 0 / 30%);
+
+    display: inline-block;
+}
+
+#osd-info {
+    position: absolute;
+
+    left: 40px;
+    right: 40px;
+    top: 40px;
+    bottom: 40px;
+
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 0 0 3px black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #gallery-container {
