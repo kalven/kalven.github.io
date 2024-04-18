@@ -13,6 +13,7 @@ body {
     font-family: system-ui, "Open Sans", Arial, sans-serif;
     margin: 0px;
     height: calc(100% - env(titlebar-area-height, 0px));
+    overflow: hidden;
 }
 
 #pwa-flair {
