@@ -32,17 +32,6 @@ body {
   -webkit-app-region: drag;
 }
 
-#app-icon {
-    width: env(titlebar-area-height);
-    height: env(titlebar-area-height);
-    
-    background: url(assets/icons/icon48.png) no-repeat;
-    background-size: 32px 32px;
-
-    background-position-x: calc(calc(env(titlebar-area-height, 32) - 32px) / 2);
-    background-position-y: calc(calc(env(titlebar-area-height, 32) - 32px) / 2);
-}
-
 #megawrap {
     /* This makes the megawrap always hug the top of the window's
        content area, even when we have access to PWA's window frame */
@@ -218,6 +207,42 @@ dialog:modal {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#osd-sections {
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    height: 18px;
+    bottom: 40px;
+
+    padding: 6px;
+
+    backdrop-filter: blur(24px);
+    background: rgb(30 30 30 / 50%);
+
+    border: 1px solid #595858;
+    border-radius: 6px;
+}
+
+.osd-section {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+
+    border: 1px solid #d2d2d2;
+    border-radius: 4px;
+
+    color: white;
+    font-size: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 #gallery-container {

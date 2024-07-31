@@ -8,19 +8,27 @@
     <script src="app.js"></script>
   </head>
   <body>
-    <div id="pwa-flair" style="visibility:hidden">
-      <div id="app-icon"></div>
-      <div>VideoQueen</div>
-    </div>
-
     <div id="megawrap">
       <div id="video-container">
         <div id="osd-container">
           <div id="osd-title"></div>
           <div id="osd-tags"></div>
           <div id="osd-info"></div>
+          <div id="osd-sections"></div>
         </div>
         <video loop id="video-player" controls="controls" controlsList="nodownload" poster="assets/black.png"></video>
+
+        <dialog id="name-scene-dialog">
+          <form method="dialog">
+            <div class="save-scene-grid">
+              <span>Name</span><input id="save-scene-name" class="default-edit" type="text"></input>
+            </div>
+            <div id="save-query-buttons">
+              <button class="dialog-button">Cancel</button>
+              <button class="dialog-button" id="save-query-confirm" value="default">Add scene</button>
+            </div>
+          </form>
+        </dialog>
       </div>
 
       <div id="toast-container">
@@ -77,8 +85,8 @@
           <label for="settings-hide-dupes">Hide video duplicates</label><br>
 
           <div id="settings-dialog-buttons">
-            <button class="dialog-button" id="settings-export-tags">Export tags</button>
-            <button class="dialog-button" id="settings-import-tags">Import tags</button>
+            <button class="dialog-button" id="settings-export-tags">Export metadata</button>
+            <button class="dialog-button" id="settings-import-tags">Import metadata</button>
             <div style="flex-grow: 1;"></div>
             <button class="dialog-button" id="settings-confirm" value="default">Close</button>
           </div>
