@@ -179,7 +179,19 @@ dialog:modal {
 
     display: flex;
     align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: center;
+    align-content: normal;
+}
+
+.osd-info-item {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: center;
+  order: 0;
 }
 
 #osd-sections {
