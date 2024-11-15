@@ -320,6 +320,11 @@ dialog:modal {
     cursor: pointer;
 }
 
+#toolbar span {
+    color: #fff;
+    font-weight: 600;
+}
+
 #toolbar button:hover {
     opacity: 0.7;
 }
@@ -411,7 +416,7 @@ dialog:modal {
     background: url(./assets/backspace-icon.svg) no-repeat;
     background-size: 24px 24px;
     background-position: 3px 3px;
-    margin-left: -42px;
+    margin-left: -46px;
     opacity: 0.9;
     visibility: hidden;
 }
