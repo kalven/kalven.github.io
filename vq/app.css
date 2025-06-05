@@ -12,35 +12,8 @@ body {
     background: var(--main-bg-color);
     font-family: system-ui, "Open Sans", Arial, sans-serif;
     margin: 0px;
-    height: calc(100% - env(titlebar-area-height, 0px));
+    height: 100%;
     overflow: hidden;
-}
-
-#pwa-flair {
-  position: fixed;
-
-  left: env(titlebar-area-x, 0);
-  top: env(titlebar-area-y, 0);
-  width: env(titlebar-area-width, 100%);
-  height: env(titlebar-area-height, 32px);
-
-  color: white;
-
-  display: flex;
-  align-items: center;
-
-  -webkit-app-region: drag;
-}
-
-#megawrap {
-    /* This makes the megawrap always hug the top of the window's
-       content area, even when we have access to PWA's window frame */
-    margin-top: env(titlebar-area-height, 0px);
-
-    width: calc(100% - 0px);
-    height: calc(100% - 2px);
-
-    position: relative;
 }
 
 dialog {
@@ -113,7 +86,6 @@ dialog:modal {
     bottom: 40px;
 
     opacity: 0;
-    transition: opacity 0.2s linear;
 
     z-index: 50;
 
