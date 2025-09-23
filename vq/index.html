@@ -12,6 +12,7 @@
       <div id="osd-container">
         <div id="osd-title"></div>
         <div id="osd-tags"></div>
+        <div id="osd-fileinfo"></div>
         <div id="osd-info">
           <div id="osd-info1" class="osd-info-item"></div>
           <div id="osd-info2" class="osd-info-item"></div>
@@ -49,14 +50,16 @@
         <div id="sort-dropdown">
           <button id="shuffle-button"></button>
           <div id="sort-dropdown-content" class="sort-dropdown-content">
-            <input type="radio" id="arrange-shuffle" name="arrange-group">
-            <label for="arrange-shuffle">Shuffle</label><br>
-            <input type="radio" id="arrange-sort-az" name="arrange-group">
-            <label for="arrange-sort-az">Sort by title</label><br>
-            <input type="radio" id="arrange-sort-size" name="arrange-group">
-            <label for="arrange-sort-size">Sort by file size</label><br>
-            <input type="radio" id="arrange-sort-duration" name="arrange-group">
-            <label for="arrange-sort-duration">Sort by duration</label><br>
+            <input type="radio" id="arrange_shuffle" name="arrange-group">
+            <label for="arrange_shuffle">Shuffle</label><br>
+            <input type="radio" id="arrange_by_name" name="arrange-group">
+            <label for="arrange_by_name">Sort by title</label><br>
+            <input type="radio" id="arrange_by_file_size" name="arrange-group">
+            <label for="arrange_by_file_size">Sort by file size</label><br>
+            <input type="radio" id="arrange_by_duration" name="arrange-group">
+            <label for="arrange_by_duration">Sort by duration</label><br>
+            <input type="radio" id="arrange_by_quality" name="arrange-group">
+            <label for="arrange_by_quality">Sort by quality</label><br>
           </div>
         </div>
         <button id="settings" title="Settings"></button>
