@@ -606,7 +606,8 @@ dialog::backdrop {
 
 .duration-badge,
 .quality-badge,
-.file-size-badge {
+.file-size-badge,
+.view-time-badge {
     position: absolute;
     z-index: 2;
     color: var(--text-color);
@@ -640,6 +641,12 @@ dialog::backdrop {
     top: 8px;
 }
 
+.view-time-badge {
+    left: 8px;
+    bottom: 8px;
+    opacity: 0;
+}
+
 .quality-badge:empty {
     display: none;
 }
@@ -649,6 +656,10 @@ dialog::backdrop {
 }
 
 .file-size-badge:empty {
+    display: none;
+}
+
+.view-time-badge:empty {
     display: none;
 }
 
@@ -699,6 +710,10 @@ dialog::backdrop {
 
 .entry-preview:hover > .file-size-badge {
     opacity: 0;
+}
+
+.entry-preview:hover > .view-time-badge {
+    opacity: 1;
 }
 
 .tag-add {

@@ -4,7 +4,6 @@
   "background_color": "#0f172a",
   "theme_color": "#0f172a",
   "display": "fullscreen",
-  "display_override": ["window-controls-overlay"],
   "id": "https://kalven.github.io/vq/index.html",
   "start_url": "./",
   "scope": "./",
